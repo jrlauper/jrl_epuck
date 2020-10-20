@@ -1,0 +1,24 @@
+build/default/production/_ext/1472/main_c.o:  \
+../main_c.c  \
+ ../e_epuck_ports.h  \
+../e_init_port.h  \
+../e_motors.h  \
+../e_led.h  \
+ ../e_uart_char.h  \
+../e_ad_conv.h  \
+../e_prox.h  \
+../e_agenda.h  \
+../e_sound.h  \
+ ../e_remote_control.h  \
+../e_micro.h  \
+../btcom.h  \
+../utility_mod3.h  \
+ ../remote_control_utility.h  \
+../e_freq_sound.h  \
+../e_freq_recognition.h  \
+ ../runbraitenberg_mod3.h  \
+../run_chirping.h  \
+../run_alpha_algo.h  \
+ ../run_simon.h  \
+../runlocatesound.h  \
+../runfftlistener.h 

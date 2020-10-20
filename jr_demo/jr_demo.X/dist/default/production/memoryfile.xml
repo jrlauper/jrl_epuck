@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/default/production/jr_demo.X.production.cof">
+    <memory name="data">
+      <units>bytes</units>
+      <length>8096</length>
+      <used>6566</used>
+      <free>1530</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>147072</length>
+      <used>66123</used>
+      <free>80949</free>
+    </memory>
+  </executable>
+</project>
