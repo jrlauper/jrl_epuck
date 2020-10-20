@@ -73,7 +73,7 @@ void run_braitenberg_lover(void);
 	// #Video: https://youtu.be/RJmENOPq444
 void run_braitenberg_explorer_and_lover(void);
     // alternates the explorer and the lover behavior during random time
-	// #Video: https://youtu.be/wS3-Rraagmc
+	// #Video: https://youtu.be/iLH2aBzI9MI
 void run_braitenberg_swiss_EL();
     // Collective Heap Building - "Swiss Xp"
     // uses explorer_neuron w/o ps7 and ps0
