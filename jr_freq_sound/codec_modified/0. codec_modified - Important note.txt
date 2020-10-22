@@ -1,0 +1,28 @@
+JRL Summer 2019
+
+Be careful!
+***********
+jr_freq_sound is based on GCtronic audio_recording project.
+
+But,Audio_Recording uses a modified version of the codec files originally in the library.
+(especially e_sub_dci_kickoff.s)
+As jr_freq_sound is based on the audio_recording project -> it uses this modified version
++ some slight modifications
+Therefore, if you use the codec files from the library and not this modified version,
+jr_sound_freq stops to work.
+In a converse way : you can't use this modified version with project made for 
+the unmodified version - typically the e_wav_music2 library
+
+=> to be able to use both the modified and unmodified version of the codec library
+we should modify quite a lot of things in the assembler files
+
+# 8 files to copy from the modified version of the codec:
+    common.inc
+    e_common.inc
+    e_init_codec_slave.s
+    e_init_dci_master.s
+    e_isr_dci.s
+    e_sound.h
+    e_sound.c
+    e_sub_dci_kickoff.s
+

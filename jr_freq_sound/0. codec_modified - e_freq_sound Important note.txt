@@ -1,0 +1,24 @@
+****************************************************
+Jean-Roch LAUPER - Sound Generator Library for epuck
+****************************************************
+
+
+[!!!] Modified Codec folder files:
+----------------------------------
+Being based on the audio-recording project 
+
+    https://www.gctronic.com/doc/index.php/E-Puck#Audio_recording
+    http://projects.gctronic.com/E-Puck/DemoGCtronic-recording/DemoGCtronic-recording.zip
+
+the e_freq_sound.c/h library uses a MODIFIED version of the CODEC folder files 
+in comparison with the ones present in the standard library of the e-puck
+(especially e_sub_dci_kickoff.s)
+Therefore, if you uses the original codec files of the standard library
+and not the ones present in this folder (they are also gathered in 
+the "codec_modified") jr_sound_freq stops to work. 
+
+In connection: you can't use this modified version of codec files 
+ with projects made for the unmodified version of the standard library 
+- typically the e_wav_music2 library (which uses pre-recorded sounds)
+
+
