@@ -1115,6 +1115,9 @@ void freq_ir_piano_C_to_C1() {
 // thanks to Celine Lauper for the identification of the tones of the tunes :-) 
 void freq_tunes_examples(int choice) {
     int i;
+    int d = 1.8; 
+    /* duration factor when needed */
+    
     float pause;
 //    if (AUDIO_ON == 0) 
 //        e_init_sound();
@@ -1146,67 +1149,72 @@ void freq_tunes_examples(int choice) {
 
             
         case 2 : // daft punk "veridis quo"
-
+            d = 1.8;
+            
             for(i=0; i<2; i++){
-                freq_fa(1);freq_mi(1);freq_fa(1);freq_re(3);    
-                    freq_fa(1);freq_do_(1);freq_fa(1);freq_si0(9);
-                freq_mi(1);freq_re(1);freq_mi(1);freq_do_(3);   
-                    freq_mi(1);freq_si0(1);freq_mi(1);freq_la0(9);
+                freq_fa(1*d);freq_mi(1*d);freq_fa(1*d);freq_re(3*d);    
+                    freq_fa(1*d);freq_do_(1*d);freq_fa(1*d);freq_si0(12*d);
+                freq_mi(1*d);freq_re(1*d);freq_mi(1*d);freq_do_(3*d);   
+                    freq_mi(1*d);freq_si0(1*d);freq_mi(1*d);freq_la0(12*d);
             }
 
-            freq_la(1);freq_sol(1);freq_la(1);freq_fa(3);   
-                freq_la(1);freq_mi(1);freq_la(1);freq_re(9);
-            freq_sol(1);freq_fa(1);freq_sol(1);freq_mi(3);  
-                freq_sol(1);freq_re(1);freq_sol(1);freq_do_(9);
+            freq_la(1*d);freq_sol(1*d);freq_la(1*d);freq_fa(3*d);   
+                freq_la(1*d);freq_mi(1*d);freq_la(1*d);freq_re(12*d);
+            freq_sol(1*d);freq_fa(1*d);freq_sol(1*d);freq_mi(3*d);  
+                freq_sol(1*d);freq_re(1*d);freq_sol(1*d);freq_do_(12*d);
 
-            freq_fa(1);freq_mi(1);freq_fa(1);freq_re(3);    
-                freq_fa(1);freq_do_(1);freq_fa(1);freq_si0(9);
-            freq_mi(1);freq_re(1);freq_mi(1);freq_do_(3);   
-                freq_mi(1);freq_si0(1);freq_mi(1);freq_la0(9);                    
+            freq_fa(1*d);freq_mi(1*d);freq_fa(1*d);freq_re(3*d);    
+                freq_fa(1*d);freq_do_(1*d);freq_fa(1*d);freq_si0(12*d);
+            freq_mi(1*d);freq_re(1*d);freq_mi(1*d);freq_do_(3*d);   
+                freq_mi(1*d);freq_si0(1*d);freq_mi(1*d);freq_la0(12*d);                    
 
-            freq_rest(2);
+            freq_rest(2*d);
             break;
 
             
         case 3 : // "frère Jacques" "Are you sleeping? (brother John")
-
+            d = 1.8;
+            
             for(i = 0; i<2; i++){
-                freq_do_(3);freq_re(3);freq_mi(3);freq_do_(3);
+                freq_do_(3*d);freq_re(3*d);freq_mi(3*d);freq_do_(3*d);
             }
             for(i = 0; i<2; i++){
-                freq_mi(3);freq_fa(3);freq_sol(7);
+                freq_mi(3*d);freq_fa(3*d);freq_sol(7*d);
             }
             for(i = 0; i<2; i++){
-                freq_sol(1);freq_la(1);freq_sol(1);freq_fa(1);freq_mi(3);freq_do_(3);
+                freq_sol(1*d);freq_la(1*d);freq_sol(1*d);freq_fa(1*d);freq_mi(3*d);freq_do_(3*d);
             }
             for(i = 0; i<2; i++){
-                freq_do_(3);freq_sol0(3);freq_do_(7);
+                freq_do_(3*d);freq_sol0(3*d);freq_do_(7*d);
             }                                
-            freq_rest(2);
+            freq_rest(2*d);
             break;
 
             
         case 4 : // usage of halt-tones
             // "star wars - The imperial March" improved (thanks to half-tones)             
-            pause=0.125; // 1/8 works well just for a staccato
-            freq_rest(pause);freq_mi(3);freq_rest(pause);freq_mi(3);freq_rest(pause);freq_mi(3);
-            freq_do_(2);freq_rest(pause);freq_sol(1);freq_mi(3);
-            freq_do_(2);freq_rest(pause); freq_sol(1);freq_mi(6);
-            freq_rest(pause); freq_si(3);freq_rest(pause);freq_si(3);freq_rest(pause);freq_si(3);
-            freq_do1(2); freq_rest(pause); freq_sol(1); freq_mi_bemol(3); // ask Celine -> in fact mi b
-            freq_do_(2); freq_rest(pause); freq_sol(1); freq_mi(6);
-            freq_rest(2);                
+            d = 1.8;
+            pause=0.125*2; // 1/8 works well just for a staccato
+            freq_rest(pause);freq_mi(d*3);freq_rest(pause);freq_mi(d*3);freq_rest(pause);freq_mi(d*3);
+            freq_do_(d*2);freq_rest(pause);freq_sol(d*1);freq_mi(d*3);
+            freq_do_(d*2);freq_rest(pause); freq_sol(d*1);freq_mi(d*6);
+            freq_rest(pause); freq_si(d*3);freq_rest(pause);freq_si(d*3);freq_rest(pause);freq_si(d*3);
+            freq_do1(d*2); freq_rest(pause); freq_sol(d*1); freq_mi_bemol(d*3); // ask Celine -> in fact mi b
+            freq_do_(d*2); freq_rest(pause); freq_sol(d*1); freq_mi(d*6);
+            freq_rest(d*2);                
             break;     
 
             
         case 5 : // Digger game / "popcorn"
+            d = 1.5;
+            
             for(i = 0; i<2; i++){
-                freq_la(1);freq_sol(1);freq_la(1);freq_mi(1);freq_do_(1);freq_mi(1);freq_la0(3);
+                freq_la(1*d);freq_sol(1*d);freq_la(1*d);freq_mi(1*d);freq_do_(1*d);freq_mi(1*d);freq_la0(3*d);
             }
-            freq_la(1);freq_si(1);    
-            freq_do1(1);freq_si(1);freq_do1(1);freq_la(1);
-            freq_si(1);freq_la(1); freq_si(1); freq_sol(1);
-            freq_la(1);freq_sol(1);freq_la(1);freq_sol(1);freq_la(3);
+            freq_la(1*d);freq_si(1*d);    
+            freq_do1(1*d);freq_si(1*d);freq_do1(1*d);freq_la(1*d);
+            freq_si(1*d);freq_la(1*d); freq_si(1*d); freq_sol(1*d);
+            freq_la(1*d);freq_sol(1*d);freq_la(1*d);freq_sol(1*d);freq_la(3*d);
             break;
 
             
@@ -1231,13 +1239,15 @@ void freq_tunes_examples(int choice) {
 
             
         case 7: // Game of Thrones
-            freq_mi(6);freq_la0(6);
-                freq_do_(1);freq_re(1);freq_mi(3);freq_la0(5);
-                freq_do_(1);freq_re(1);freq_si0(24);
-            freq_re(6);freq_sol0(6);
-                freq_do_(1);freq_si0(1);freq_re(3);freq_sol0(5);
-                freq_do_(1); freq_rest(1); freq_do_(1); freq_si0(1);freq_la0(24);
-            freq_rest(2);
+            d = 1.8;
+            
+            freq_mi(6*d);freq_la0(6*d);
+                freq_do_(1*d);freq_re(1*d);freq_mi(3*d);freq_la0(5*d);
+                freq_do_(1*d);freq_re(1*d);freq_si0(24*d);
+            freq_re(6*d);freq_sol0(6*d);
+                freq_do_(1*d);freq_si0(1*d);freq_re(3*d);freq_sol0(5*d);
+                freq_do_(1*d); freq_rest(1*d); freq_do_(1*d); freq_si0(1*d);freq_la0(24*d);
+            freq_rest(2*d);
             break;
 
             

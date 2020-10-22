@@ -18,7 +18,7 @@
  * plus: the key information: the sample rate for the codec must be 7200 Hz.
  * 
  * 
- * 
+ *  
  * [!!!] Modified Codec folder files:
  * ----------------------------------
  * Being based on the audio-recording project mentioned just above, 
@@ -32,7 +32,7 @@
  *  with projects made for the unmodified version of the standard library 
  * - typically the e_wav_music2 library (which uses pre-recorded sounds)
  * 
- * 
+ *
  * 
  * [A. core function of the library]
  * 
@@ -107,6 +107,7 @@
  *             freq_rest(2);        
  *         }
  * 
+ * 
  * #video: demo : https://youtu.be/udtJUNvuzgM
  * To launch it: freq_video_full_demo()
  */
@@ -120,8 +121,6 @@
 
 #ifndef JR_FREQ_SOUND_H
 #define	JR_FREQ_SOUND_H
-
-
 
 
 /* ************** SOUND WAVE SHAPES *************** */
@@ -216,13 +215,6 @@ void freq_ir_piano_C_to_C1();
 /* allows you to play small melodies 
  * by passing your hands in front of the infrared sensors.
  * #video: https://youtu.be/VEd9eDacvss */
-/* [important note] 
- * to use this function, because of the proximity IR sensors, you need to add
- *      #include "e_ad_conv.h
- * and the necessary initialization : 
- *      e_init_ad_scan(ALL_ADC):
- *       e_calibrate_ir(); */
-
 
 void freq_tunes_examples(int choice);
 /* enables to plays various very-well known melodies among 12 choices 

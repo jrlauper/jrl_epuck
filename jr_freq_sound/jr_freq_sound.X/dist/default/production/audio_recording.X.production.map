@@ -1130,17 +1130,17 @@ __FBORPOR
 
 __FBS             0xf80006          0x2
  *(__FBS.sec)
- __FBS.sec        0xf80006          0x2 /CW/_FBS(çè
+ __FBS.sec        0xf80006          0x2 /CW/_FBS(}
                   0xf80006                  __FBS.sec
 
 __FSS             0xf80008          0x2
  *(__FSS.sec)
- __FSS.sec        0xf80008          0x2 /CW/_FSS®ﬁé
+ __FSS.sec        0xf80008          0x2 /CW/_FSS®Œ
                   0xf80008                  __FSS.sec
 
 __FGS             0xf8000a          0x2
  *(__FGS.sec)
- __FGS.sec        0xf8000a          0x2 /CW/_FGS∏Œé
+ __FGS.sec        0xf8000a          0x2 /CW/_FGS∏æ
                   0xf8000a                  __FGS.sec
 
 __FICD
@@ -2585,9 +2585,9 @@ LOAD /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a
 LOAD /opt/microchip/xc16/v1.50/bin/bin/../../lib/libc-elf.a
 END GROUP
 OUTPUT(dist/default/production/jr_freq_sound.X.production.elf elf32-pic30)
-LOAD /CW/_FGS∏Œé
-LOAD /CW/_FSS®ﬁé
-LOAD /CW/_FBS(çè
+LOAD /CW/_FGS∏æ
+LOAD /CW/_FSS®Œ
+LOAD /CW/_FBS(}
 LOAD default_isr
 LOAD heap
 LOAD data_init
