@@ -18,6 +18,22 @@
  * plus: the key information: the sample rate for the codec must be 7200 Hz.
  * 
  * 
+ *  
+ * [!!!] Modified Codec folder files:
+ * ----------------------------------
+ * Being based on the audio-recording project mentioned just above, 
+ * this library uses a MODIFIED version of the CODEC folder files 
+ * in comparison with the ones present in the standard library of the e-puck
+ * (especially e_sub_dci_kickoff.s)
+ * Therefore, if you uses the original codec files of the standard library
+ * and not the ones present in this folder, jr_sound_freq stops to work. 
+ * 
+ * In connection: you can't use this modified version of codec files 
+ *  with projects made for the unmodified version of the standard library 
+ * - typically the e_wav_music2 library (which uses pre-recorded sounds)
+ * 
+
+ * 
  * [A. core function of the library]
  * 
  *          freq_play(double freq, double length);
@@ -44,6 +60,7 @@
  * 
  *  One variant of the core function enables to play a "glissendo" 
  *  starting from some frequency to another one. 
+ * 
  * 
  *  
  * [B. Auxiliary Function]
@@ -73,6 +90,7 @@
  *      see below for more details. 
  *
  * 
+ * 
  *  Here is a basic example showing two ways to play a beep at 3072
  * 
  *         #include "e_init_port.h"
@@ -88,6 +106,7 @@
  *             freq_beep1_3072(0.5);
  *             freq_rest(2);        
  *         }
+ * 
  * 
  * #video: demo : https://youtu.be/udtJUNvuzgM
  * To launch it: freq_video_full_demo()

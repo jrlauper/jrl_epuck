@@ -6,7 +6,6 @@
                    projectFiles="true">
       <itemPath>../e_epuck_ports.h</itemPath>
       <itemPath>../e_init_port.h</itemPath>
-      <itemPath>../e_ad_conv.h</itemPath>
       <itemPath>../e_micro.h</itemPath>
       <itemPath>../e_led.h</itemPath>
       <itemPath>../e_motors.h</itemPath>
