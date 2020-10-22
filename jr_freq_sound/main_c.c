@@ -55,9 +55,10 @@ int main() {
                 break;
                 
             case 14: // play all the tunes one after the other                  
-                for (i = 1; i<=12; i++)
-                    freq_tunes_examples(i);
-                    wait_jr(500);               
+                for (i = 1; i<=12; i++){
+                    wait_jr(500);       
+                    freq_tunes_examples(i);                    
+                }
                 break;
             
             case 0:
