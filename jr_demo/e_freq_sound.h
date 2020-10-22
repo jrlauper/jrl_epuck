@@ -32,7 +32,7 @@
  *  with projects made for the unmodified version of the standard library 
  * - typically the e_wav_music2 library (which uses pre-recorded sounds)
  * 
-
+ *
  * 
  * [A. core function of the library]
  * 

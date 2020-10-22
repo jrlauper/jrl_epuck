@@ -59,7 +59,15 @@ float getDiffTimeMsAndReset(void);
 /* ***** JRL additions ***** */
 
 void wait_jr(int x); // in ms
-void battery_display();
+
+void battery_display(); 
+/* if the e-puck is HWRev 1.3 displays the battery charge through the leds
+ * led 0 : 10 % ... led 7: 80%...
+ * if the e-puck is HWRev 1.1 not available: cross leds
+ * For this function to work : 
+ * you need the following initialization in your code:
+ *      e_init_ad_scan(ALL_ADC);  */
+
 
 
 bool surrounded(); 
