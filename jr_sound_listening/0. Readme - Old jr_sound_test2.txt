@@ -1,0 +1,2 @@
+This folder is the same as jr_sound_test2
+=> but I changed its name (21.08.2019) for more clarity in the final folders made available

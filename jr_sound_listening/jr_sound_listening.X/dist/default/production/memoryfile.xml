@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/default/production/jr_sound_listening.X.production.cof">
+    <memory name="data">
+      <units>bytes</units>
+      <length>8096</length>
+      <used>4484</used>
+      <free>3612</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>147072</length>
+      <used>29094</used>
+      <free>117978</free>
+    </memory>
+  </executable>
+</project>
