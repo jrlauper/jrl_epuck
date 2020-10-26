@@ -2,10 +2,10 @@
 
 ## using *Embedded* Programming <br/>with E-Pucks vers.1 (dsPIC) and *Sound*
 
-BSc Thesis, Jean-Roch LAUPER (2020), jrlauper(at)yahoo.fr 
+BSc Thesis, Jean-Roch LAUPER (2020), jrlauper(at)yahoo.fr <br/>
 [Department of Informatics](http://diuf.unifr.ch), [University of Fribourg](http://www.unifr.ch) (Switzerland)
 
-The main part of this work is a demo set using 1st generation e-pucks (dsPIC) in an *embedded* way. 
+The main part of this work is a demo set using 1st generation e-pucks (dsPIC) in an *embedded* way. <br/>
 The demos emphasize *collective* behavior and make extensive use of e-puck *sound* capabilities ( micros and speakers). 
 
 - **Demo set**: [jr_demo](https://github.com/jrlauper/jrl_epuck/tree/master/jr_demo)
