@@ -1,13 +1,6 @@
 /************************************************************************/
-/** Sound Test **/
-/** JRL, Spring 2019   **/
-
-/* To test : when the sound is emitted by an e-puck
- * (cf. jr_music > main_c.c.tones_test
- * - microphone volume
- * - frequency
- * 
- * Différentes manière de reconnaître une note
+/** Sound Test **
+/** JRL, Spring 2019   **
  * 
  * Tones identifications
  * 
