@@ -1,6 +1,6 @@
 /******************************************************************************* 
  * 
- * TONES MODULE - from pre-recorded sound
+ * TONES MODULE - from pre-recorded sounds
  * Version 2.0. August 2019. 
  * Jean-Roch LAUPER (unifr.ch)
  * 
