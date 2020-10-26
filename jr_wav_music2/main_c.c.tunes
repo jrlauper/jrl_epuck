@@ -1,0 +1,168 @@
+/************************************************************************/
+/** Music Player **/
+/** JRL, Spring 2019   **/
+
+/* Thank you to Celine Lauper for having kindly
+ * told me the tones of the tunes
+/************************************************************************/
+
+#include "e_epuck_ports.h"
+#include "e_music.h"
+
+#include "e_motors.h"
+
+int getselector() {
+    return SELECTOR0 + 2*SELECTOR1 + 4*SELECTOR2 + 8*SELECTOR3;
+}
+
+
+void do_nothing(){
+    ;
+}
+
+
+int main() {
+    int selector = 0;
+    int i = 0;
+//    long i;
+    
+    e_init_port();        
+    
+//    e_init_motors();
+//    e_set_speed_left(400);
+//    e_set_speed_right(400);
+    e_init_sound();    
+    e_led_clear();
+    
+    set_music_led(1);
+    
+    while(1) {
+        selector = getselector();
+        
+        switch(selector) {
+            
+            case 0 : // scale and possibilities
+                c(2);d(2);e(2);f(2);g(2);a(2);b(2);c1(4);
+                wait(1000);
+                c1(2);b(2);a(2);g(2);f(2);e(2);d(2);c(4);
+                wait(1000);
+                c(2);b0(2);a0(2);g0(2);f0(2);
+                wait(1000);
+                c1(2); d1(2); e1(2);
+                wait(1000);
+                break;      
+            
+            case 1 : // scale 2 and possibilities
+                do_(2);re(2);mi(2);fa(2);sol(2);la(2);si(2);do1(4);
+                wait(1000);
+                do1(2);si(2);la(2);sol(2);fa(2);mi(2);re(2);do_(4);
+                wait(1000);
+                do_(2);si0(2);la0(2);sol0(2);fa0(2);
+                wait(1000);
+                do1(2); re1(2); mi1(2);
+                wait(1000);
+                break; 
+            
+            case 2 : // daft punk "veridis quo"
+                
+                for(i=0; i<2; i++){
+                    fa(1);mi(1);fa(1);re(2);    fa(1);do_(1);fa(1);si0(9);
+                    mi(1);re(1);mi(1);do_(2);   mi(1);si0(1);mi(1);la0(9);
+                }
+                 
+                la(1);sol(1);la(1);fa(2);   la(1);mi(1);la(1);re(9);
+                sol(1);fa(1);sol(1);mi(2);  sol(1);re(1);sol(1);do_(9);
+                
+                fa(1);mi(1);fa(1);re(2);    fa(1);do_(1);fa(1);si0(9);
+                mi(1);re(1);mi(1);do_(2);   mi(1);si0(1);mi(1);la0(9);
+                                
+                break;
+            
+            case 3 : // "frère Jacques" "Are you sleeping? (brother John")
+                
+                for(i = 0; i<2; i++){
+                    do_(2);re(2);mi(2);do_(2);
+                }
+                for(i = 0; i<2; i++){
+                    mi(2);fa(2);sol(4);
+                }
+                for(i = 0; i<2; i++){
+                    sol(1);la(1);sol(1);fa(1);mi(2);do_(2);
+                }
+                for(i = 0; i<2; i++){
+                    do_(2);sol0(2);do_(4);
+                }                                
+                break;
+
+            case 4 : // "star wars - The imperial March"              
+                wait(50);mi(3);wait(50);mi(3);wait(50);mi(3);
+                do_(2);sol(1);mi(3);
+                do_(2);sol(1);mi(3);
+                wait(50); si(3);wait(50);si(3);wait(50);si(3);
+                do1(2); sol(1); mi(3); // ask Celine
+                do_(2); sol(1); mi(3);
+                wait(1000);                
+                break;     
+            
+            case 5 : // Digger game / "popcorn"
+                for(i = 0; i<2; i++){
+                    la(1);sol(1);la(1);mi(1);do_(1);mi(1);la0(2);
+                }
+                la(1);si(1);    
+                do1(1);si(1);do1(1);la(1);
+                si(1);la(1); si(1); sol(1);
+                la(1);sol(1);la(1);sol(1);la(2);
+                break;
+                
+            case 6 : //Beethoven 5th
+                mi(1); wait(10);mi(1);wait(10);mi(1);do_(11);
+                re(1);wait(10);re(1);wait(10);re(1);si0(11);
+                
+                mi(1);wait(10);mi(1);wait(10);mi(1);do_(1);
+                fa(1);wait(10);fa(1);wait(10);fa(1);mi(1);
+                do1(1);wait(10);do1(1);wait(10);do1(1);la(5);
+                
+                mi(1);wait(10);mi(1);wait(10);mi(1);si0(1);
+                fa(1);wait(10);fa(1);wait(10);fa(1);mi(1);
+                re1(1);wait(10);re1(1);wait(10);re1(1);si(5);
+                
+                mi(1);wait(10);mi(1);re(1);do_(3);re(1);mi(1);
+                mi(1);wait(10);mi(1);re(1);do_(3);re(1);mi(1);
+                
+                mi(1);wait(10);mi(1);re(1);do_(4);la0(4);mi(11);
+                wait(1000);                                
+                break;
+            
+            case 7: // Game of Thrones
+                mi(6);la0(6);do_(1);re(1);mi(4);la0(4);do_(1);re(1);si0(24);
+                re(6);sol0(6);do_(1);si0(1);re(4);sol0(4);do_(1);si0(1);la0(24);
+                break;
+                
+            case 8: // Jingle Bells
+                wait(50);mi(1);wait(50);mi(1);wait(50);mi(3);
+                wait(50);mi(1);wait(50);mi(1);wait(50);mi(3);
+                wait(50);mi(1);sol(1);do_(1);re(1);mi(4);
+                wait(50);fa(1);wait(50);fa(1);wait(50);fa(2);wait(50);
+                wait(50);sol(1);wait(50);fa(1);wait(50);mi(1);wait(50);mi(1);
+                wait(50);mi(1);wait(50);mi(1);wait(50);re(1);wait(50);re(1);mi(1);re(3);sol(4);
+                wait(1000);
+                
+            case 9: // Mozart "Petite musique de nuit"
+                do_(3);sol0(1);do_(3);sol0(1);do_(1);sol0(1);do_(1);mi(1);sol(4);
+                fa(3);re(1);fa(3);re(1);fa(1);re(1);si0(1);re(1);sol0(4);
+                do_(3);do_(3);mi(1);re(1);do_(1);do_(1);si0(1);si0(4);
+                re(1);fa(1);si0(1);re(1);do_(1);do_(4);
+                mi(1);re(1);do_(1);do_(1);si0(1);si0(1);
+                re(1);fa(1);si0(1);do_(4);
+                wait(1000);
+                
+            default:
+                do_nothing();
+                break;                
+        }
+
+        
+    }
+    e_close_sound();
+    
+}

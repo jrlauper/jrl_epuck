@@ -1,0 +1,106 @@
+/************************************************************************/
+/** IR Piano **/
+/** JRL, Spring 2019   **/
+
+/* plays b0() to b() depending 
+ * on the sensor before which your finger is standing 
+/************************************************************************/
+
+/* source used:
+ GCTronics basic demos 4 and 5
+ http://www.gctronic.com/doc/index.php?title=E-Puck#Basic_demos
+ 19 May 2019*/
+
+#include "e_epuck_ports.h"
+#include "e_music.h"
+
+#include "e_motors.h"
+#include "e_sound.h"
+#include "e_led.h"
+
+#include "e_ad_conv.h" // for ir prox
+#include "e_prox.h"
+
+int getselector() {
+    return SELECTOR0 + 2*SELECTOR1 + 4*SELECTOR2 + 8*SELECTOR3;
+}
+
+
+void do_nothing(){
+    ;
+}
+
+
+int main() {
+    int selector = 0;
+    int i = 0;
+//    long i;
+    
+    e_init_port();        
+    
+    e_init_sound();        
+    set_music_led(0);
+    e_led_clear();    
+    
+    e_init_ad_scan(ALL_ADC);
+    e_calibrate_ir();
+    
+    while(1) {
+        selector = getselector();
+        e_led_clear();
+        
+        if (selector == 0) {
+            
+             e_led_clear();
+             e_set_front_led(0);
+             if (e_get_calibrated_prox(0)>400) {                    
+                    e_set_led(0,1);
+                    e_set_front_led(1);         
+                    // wait(50);
+                    c(1);
+                }
+                if (e_get_calibrated_prox(1)>400) {                    
+                    e_set_led(1,1);                
+                    // wait(50);
+                    d(1);
+                }
+                if (e_get_calibrated_prox(2)>400) {                                                        
+                    e_set_led(2,1);                
+                    // wait(50);
+                    e(1);    
+                }
+                if (e_get_calibrated_prox(3)>400) {                    
+                    e_set_led(3,1);                
+                    // wait(50);
+                    f(1);
+                }
+                if (e_get_calibrated_prox(4)>400) {                                    
+                    e_set_led(5,1);                    
+                    // wait(50);
+                    g(1);                    
+                }
+                if (e_get_calibrated_prox(5)>400) {                    
+                    e_set_led(6,1);                
+                    // wait(50);
+                    a(1);
+                }
+                if (e_get_calibrated_prox(6)>400) {                    
+                    e_set_led(7,1);                
+                    // wait(50);
+                    b(1);
+                }
+                if (e_get_calibrated_prox(7)>400) {                                        
+                    e_set_led(0,1);                
+                    // wait(50);
+                    c1(1);
+                }
+                
+            
+        } else {
+            do_nothing();
+        }        
+        
+    }
+    e_close_sound();
+    
+}

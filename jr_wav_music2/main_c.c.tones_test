@@ -1,0 +1,70 @@
+/************************************************************************/
+/** Selector-Tone **/
+/** JRL, Spring 2019   **/
+
+/* play one of the 14 tones for each selector
+ * I use the codec directly like this 
+ * -> selector on 0 -> plays segment 0 of e_const_sound.s
+ * 
+/************************************************************************/
+
+#include "e_epuck_ports.h"
+#include "e_music.h"
+
+#include "e_motors.h"
+#include "e_sound.h"
+#include "e_led.h"
+
+int getselector() {
+    return SELECTOR0 + 2*SELECTOR1 + 4*SELECTOR2 + 8*SELECTOR3;
+}
+
+
+void do_nothing(){
+    ;
+}
+
+
+int main() {
+    int selector = 0;
+    int i = 0;
+//    long i;
+    
+    e_init_port();        
+    
+//    e_init_motors();
+//    e_set_speed_left(400);
+//    e_set_speed_right(400);
+    e_init_sound();    
+    e_led_clear();
+    
+    set_music_led(1);
+    
+    while(1) {
+        selector = getselector();
+        e_led_clear();
+        
+        if (selector >= 0 && selector <= 13) {
+            if (selector < 13) {
+                e_set_led(selector % 8,1);
+                e_play_sound(selector*1600,1600);                
+                wait(200); 
+                // roughly 200ms / the length of the recored samples
+                // you always need to wait some time for the sound to be played
+                // otherwise only one sound.
+            } else {
+                e_set_led(selector % 8,1);
+                e_play_sound(selector*1600,1200);
+                wait(150);
+                // the last seg is shorter as a matter of fact
+            }
+
+            
+        } else {
+            do_nothing();
+        }        
+        
+    }
+    e_close_sound();
+    
+}

@@ -1,0 +1,79 @@
+/************************************************************************/
+/** Music Player **/
+/** JRL, Spring 2019   **/
+
+/* Thank you to Celine Lauper for having kindly
+ * told me the tones of the tunes
+/************************************************************************/
+
+ #include "e_epuck_ports.h"
+           #include "music.h"
+  
+           int main() {         
+               e_init_port();    
+               e_led_clear();         
+               e_init_sound();
+               int i;
+               
+                for(i=0; i<2; i++){
+                    fa(1);mi(1);fa(1);re(2);    fa(1);do_(1);fa(1);si0(9);
+                    mi(1);re(1);mi(1);do_(2);   mi(1);si0(1);mi(1);la0(9);
+                }
+                 
+                la(1);sol(1);la(1);fa(2);   la(1);mi(1);la(1);re(9);
+                sol(1);fa(1);sol(1);mi(2);  sol(1);re(1);sol(1);do_(9);
+                
+                fa(1);mi(1);fa(1);re(2);    fa(1);do_(1);fa(1);si0(9);
+                mi(1);re(1);mi(1);do_(2);   mi(1);si0(1);mi(1);la0(9);
+                
+                wait(1000);
+                
+                //
+                
+                 wait(50);mi(3);wait(50);mi(3);wait(50);mi(3);
+                do_(2);sol(1);mi(3);
+                do_(2);sol(1);mi(3);
+                wait(50); si(3);wait(50);si(3);wait(50);si(3);
+                do1(2); sol(1); mi(3); // ask Celine
+                do_(2); sol(1); mi(3);
+                wait(1000);                
+                
+                //
+                
+                      for(i = 0; i<2; i++){
+                    la(1);sol(1);la(1);mi(1);do_(1);mi(1);la0(2);
+                }
+                la(1);si(1);    
+                do1(1);si(1);do1(1);la(1);
+                si(1);la(1); si(1); sol(1);
+                la(1);sol(1);la(1);sol(1);la(2);
+                
+                wait(1000);
+                
+                //
+               
+  
+               mi(1); wait(10);mi(1);wait(10);mi(1);do_(11);
+               re(1);wait(10);re(1);wait(10);re(1);si0(11);
+                  
+               mi(1);wait(10);mi(1);wait(10);mi(1);do_(1);
+               fa(1);wait(10);fa(1);wait(10);fa(1);mi(1);
+               do1(1);wait(10);do1(1);wait(10);do1(1);la(5);
+                  
+               mi(1);wait(10);mi(1);wait(10);mi(1);si0(1);
+               fa(1);wait(10);fa(1);wait(10);fa(1);mi(1);
+               re1(1);wait(10);re1(1);wait(10);re1(1);si(5);
+                  
+               mi(1);wait(10);mi(1);re(1);do_(3);re(1);mi(1);
+               mi(1);wait(10);mi(1);re(1);do_(3);re(1);mi(1);
+                 
+               mi(1);wait(10);mi(1);re(1);do_(4);la0(4);mi(11);
+               wait(1000);
+               
+               //
+               
+                mi(6);la0(6);do_(1);re(1);mi(4);la0(4);do_(1);re(1);si0(24);
+                re(6);sol0(6);do_(1);si0(1);re(4);sol0(4);do_(1);si0(1);la0(24);
+               
+               
+           }
