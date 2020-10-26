@@ -118,10 +118,10 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0x474           0x6ae  (1710)
 .sound_samples               0x574              0x9d80          0xec40  (60480)
-.text                       0xa2f4               0xdf4          0x14ee  (5358)
-.dinit                      0xb0e8                0x22            0x33  (51)
+.text                       0xa2f4               0xdea          0x14df  (5343)
+.dinit                      0xb0de                0x22            0x33  (51)
 
-                 Total "program" memory used (bytes):        0x1080f  (67599) 45%
+                 Total "program" memory used (bytes):        0x10800  (67584) 45%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -229,26 +229,26 @@ External Symbols in Program Memory (by address):
                   0x00ab68                  _all_tones
                   0x00ac00                  _all_tones_com
                   0x00ac84                  _main
-                  0x00ad84                  _e_init_motors
-                  0x00ad8c                  _e_set_speed_left
-                  0x00add6                  _e_set_speed_right
-                  0x00ae20                  _e_get_steps_left
-                  0x00ae28                  _e_set_steps_left
-                  0x00ae38                  _e_get_steps_right
-                  0x00ae40                  _e_set_steps_right
-                  0x00ae50                  _e_init_codec_slave
-                  0x00aefc                  _e_init_port
-                  0x00af86                  __DCIInterrupt
-                  0x00affc                  _e_sub_dci_kickoff
-                  0x00b072                  _e_init_dci_master
-                  0x00b0b0                  _e_init_sound
-                  0x00b0cc                  _e_play_sound
-                  0x00b0e0                  _e_close_sound
+                  0x00ad7a                  _e_init_motors
+                  0x00ad82                  _e_set_speed_left
+                  0x00adcc                  _e_set_speed_right
+                  0x00ae16                  _e_get_steps_left
+                  0x00ae1e                  _e_set_steps_left
+                  0x00ae2e                  _e_get_steps_right
+                  0x00ae36                  _e_set_steps_right
+                  0x00ae46                  _e_init_codec_slave
+                  0x00aef2                  _e_init_port
+                  0x00af7c                  __DCIInterrupt
+                  0x00aff2                  _e_sub_dci_kickoff
+                  0x00b068                  _e_init_dci_master
+                  0x00b0a6                  _e_init_sound
+                  0x00b0c2                  _e_play_sound
+                  0x00b0d6                  _e_close_sound
                   0xf8000a                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x00af86                  __DCIInterrupt
+                  0x00af7c                  __DCIInterrupt
                   0x0002e0                  __DefaultInterrupt
                   0xf8000a                  __FGS.sec
                   0x000254                  __T4Interrupt
@@ -285,24 +285,24 @@ External Symbols in Program Memory (by name):
                   0x00ab2e                  _do_nothing
                   0x00a518                  _e
                   0x00a712                  _e1
-                  0x00b0e0                  _e_close_sound
-                  0x00ae20                  _e_get_steps_left
-                  0x00ae38                  _e_get_steps_right
-                  0x00ae50                  _e_init_codec_slave
-                  0x00b072                  _e_init_dci_master
-                  0x00ad84                  _e_init_motors
-                  0x00aefc                  _e_init_port
-                  0x00b0b0                  _e_init_sound
+                  0x00b0d6                  _e_close_sound
+                  0x00ae16                  _e_get_steps_left
+                  0x00ae2e                  _e_get_steps_right
+                  0x00ae46                  _e_init_codec_slave
+                  0x00b068                  _e_init_dci_master
+                  0x00ad7a                  _e_init_motors
+                  0x00aef2                  _e_init_port
+                  0x00b0a6                  _e_init_sound
                   0x00ab18                  _e_led_clear
-                  0x00b0cc                  _e_play_sound
+                  0x00b0c2                  _e_play_sound
                   0x00aaa0                  _e_set_body_led
                   0x00aadc                  _e_set_front_led
                   0x00a760                  _e_set_led
-                  0x00ad8c                  _e_set_speed_left
-                  0x00add6                  _e_set_speed_right
-                  0x00ae28                  _e_set_steps_left
-                  0x00ae40                  _e_set_steps_right
-                  0x00affc                  _e_sub_dci_kickoff
+                  0x00ad82                  _e_set_speed_left
+                  0x00adcc                  _e_set_speed_right
+                  0x00ae1e                  _e_set_steps_left
+                  0x00ae36                  _e_set_steps_right
+                  0x00aff2                  _e_sub_dci_kickoff
                   0x00a55e                  _f
                   0x00a354                  _f0
                   0x00a598                  _fa
@@ -485,7 +485,7 @@ __FSS
 
 __FGS             0xf8000a          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf8000a          0x2 /CW/_FGSX¿µ
+ __FGS.sec        0xf8000a          0x2 /CW/_FGSXOÕ
                   0xf8000a                  __FGS.sec
 
 __FICD
@@ -527,19 +527,19 @@ userdata
  .debug_abbrev    0x000404         0x9b build/default/production/e_init_port.o
  .debug_abbrev    0x00049f         0xab build/default/production/e_music_comm.o
 
-.debug_line       0x000000        0x99d
+.debug_line       0x000000        0x99f
  *(.debug_line)
- .debug_line      0x000000        0x19d build/default/production/main_c.o
- .debug_line      0x00019d         0xee build/default/production/e_sound.o
- .debug_line      0x00028b         0x9a build/default/production/e_init_codec_slave.o
- .debug_line      0x000325         0x5e build/default/production/e_init_dci_master.o
- .debug_line      0x000383         0x6e build/default/production/e_isr_dci.o
- .debug_line      0x0003f1         0x76 build/default/production/e_sub_dci_kickoff.o
- .debug_line      0x000467        0x142 build/default/production/e_led.o
- .debug_line      0x0005a9        0x16c build/default/production/e_motors.o
- .debug_line      0x000715        0x128 build/default/production/e_init_port.o
- .debug_line      0x00083d        0x146 build/default/production/e_music_comm.o
- .debug_line      0x000983         0x1a build/default/production/e_const_sound.o
+ .debug_line      0x000000        0x19f build/default/production/main_c.o
+ .debug_line      0x00019f         0xee build/default/production/e_sound.o
+ .debug_line      0x00028d         0x9a build/default/production/e_init_codec_slave.o
+ .debug_line      0x000327         0x5e build/default/production/e_init_dci_master.o
+ .debug_line      0x000385         0x6e build/default/production/e_isr_dci.o
+ .debug_line      0x0003f3         0x76 build/default/production/e_sub_dci_kickoff.o
+ .debug_line      0x000469        0x142 build/default/production/e_led.o
+ .debug_line      0x0005ab        0x16c build/default/production/e_motors.o
+ .debug_line      0x000717        0x128 build/default/production/e_init_port.o
+ .debug_line      0x00083f        0x146 build/default/production/e_music_comm.o
+ .debug_line      0x000985         0x1a build/default/production/e_const_sound.o
 
 .debug_frame      0x000000        0x5de
  *(.debug_frame)
@@ -1619,7 +1619,7 @@ LOAD /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a
 LOAD /opt/microchip/xc16/v1.50/bin/bin/../../lib/liblega-c-elf.a
 END GROUP
 OUTPUT(dist/default/production/jr_music_comm.X.production.elf elf32-pic30)
-LOAD /CW/_FGSX¿µ
+LOAD /CW/_FGSXOÕ
 LOAD default_isr
 LOAD data_init
 
@@ -1717,7 +1717,7 @@ __c30_signature
                   0x000574       0x9d80 build/default/production/e_const_sound.o
                   0x000574                  e_sound_sample
 
-.text             0x00a2f4        0xdf4
+.text             0x00a2f4        0xdea
  .text            0x00a2f4        0x46c build/default/production/e_music_comm.o
                   0x00a2f4                  _wait_jr
                   0x00a332                  _set_music_led
@@ -1755,34 +1755,34 @@ __c30_signature
                   0x00aaa0                  _e_set_body_led
                   0x00aadc                  _e_set_front_led
                   0x00ab18                  _e_led_clear
- .text            0x00ab2e        0x256 build/default/production/main_c.o
+ .text            0x00ab2e        0x24c build/default/production/main_c.o
                   0x00ab2e                  _do_nothing
                   0x00ab34                  _getselector
                   0x00ab68                  _all_tones
                   0x00ac00                  _all_tones_com
                   0x00ac84                  _main
- .text            0x00ad84         0xcc build/default/production/e_motors.o
-                  0x00ad84                  _e_init_motors
-                  0x00ad8c                  _e_set_speed_left
-                  0x00add6                  _e_set_speed_right
-                  0x00ae20                  _e_get_steps_left
-                  0x00ae28                  _e_set_steps_left
-                  0x00ae38                  _e_get_steps_right
-                  0x00ae40                  _e_set_steps_right
- .text            0x00ae50         0xac build/default/production/e_init_codec_slave.o
-                  0x00ae50                  _e_init_codec_slave
- .text            0x00aefc         0x8a build/default/production/e_init_port.o
-                  0x00aefc                  _e_init_port
- .text            0x00af86         0x76 build/default/production/e_isr_dci.o
-                  0x00af86                  __DCIInterrupt
- .text            0x00affc         0x76 build/default/production/e_sub_dci_kickoff.o
-                  0x00affc                  _e_sub_dci_kickoff
- .text            0x00b072         0x3e build/default/production/e_init_dci_master.o
-                  0x00b072                  _e_init_dci_master
- .text            0x00b0b0         0x38 build/default/production/e_sound.o
-                  0x00b0b0                  _e_init_sound
-                  0x00b0cc                  _e_play_sound
-                  0x00b0e0                  _e_close_sound
+ .text            0x00ad7a         0xcc build/default/production/e_motors.o
+                  0x00ad7a                  _e_init_motors
+                  0x00ad82                  _e_set_speed_left
+                  0x00adcc                  _e_set_speed_right
+                  0x00ae16                  _e_get_steps_left
+                  0x00ae1e                  _e_set_steps_left
+                  0x00ae2e                  _e_get_steps_right
+                  0x00ae36                  _e_set_steps_right
+ .text            0x00ae46         0xac build/default/production/e_init_codec_slave.o
+                  0x00ae46                  _e_init_codec_slave
+ .text            0x00aef2         0x8a build/default/production/e_init_port.o
+                  0x00aef2                  _e_init_port
+ .text            0x00af7c         0x76 build/default/production/e_isr_dci.o
+                  0x00af7c                  __DCIInterrupt
+ .text            0x00aff2         0x76 build/default/production/e_sub_dci_kickoff.o
+                  0x00aff2                  _e_sub_dci_kickoff
+ .text            0x00b068         0x3e build/default/production/e_init_dci_master.o
+                  0x00b068                  _e_init_dci_master
+ .text            0x00b0a6         0x38 build/default/production/e_sound.o
+                  0x00b0a6                  _e_init_sound
+                  0x00b0c2                  _e_play_sound
+                  0x00b0d6                  _e_close_sound
 
-.dinit            0x00b0e8         0x22
- .dinit           0x00b0e8         0x22 data_init
+.dinit            0x00b0de         0x22
+ .dinit           0x00b0de         0x22 data_init

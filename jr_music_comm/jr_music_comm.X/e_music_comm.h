@@ -39,7 +39,12 @@
 // initially each tone lasts 200, but 150 gives better
 // results for frequency recognition
 
+//#define STD_TONES_DURATION (1600)
+// For FGA(880)B_CDEFGABC_DE - Cut.s
+//  this number comes from the e_const_sound.s file used
+
 #define STD_TONES_DURATION (1440)
+// for HighFrequ7_mod.s and Hz7200_mod.s
 //  this number comes from the e_const_sound.s file used
 
 #define STD_TONES_OFFSET 0

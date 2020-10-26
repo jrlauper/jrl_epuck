@@ -166,8 +166,9 @@ int main() {
             all_tones(1, 0);        
             wait_jr(1000);                
         } else if (selector == 15) {
-            all_tones_com(2,4);
-            wait_jr(1000);     
+//            all_tones_com(2,4);
+//            wait_jr(1000);     
+            // to flash w/o sound :-) 
         }
         else {
             do_nothing();                        
