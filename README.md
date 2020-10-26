@@ -12,7 +12,7 @@ The demos emphasize *collective* behavior and make extensive use of e-puck *soun
     - the youtube playlist of demo videos for the set: [link](https://www.youtube.com/playlist?list=PLrscHgSUZPdr38tirAsB4_4Q93khKP9Rv)
 
 - Simple **sound library** enabling to easily produce tones from **pre-recorded** sounds: [jr_wav_music2](https://github.com/jrlauper/jrl_epuck/tree/master/jr_wav_music2)
-- a more **advanced** **sound library** enabling to generate any sound **"on the fly"** with more advanced features (sound wave shape, volume control, ...) : [jr_freq_sound](https://github.com/jrlauper/jrl_epuck/tree/master/jr_freq_sound)
+- A more **advanced** **sound library** enabling to generate any sound **"on the fly"** with more advanced features (sound wave shape, volume control, ...) : [jr_freq_sound](https://github.com/jrlauper/jrl_epuck/tree/master/jr_freq_sound)
 
 The other folders are connected to material described in the report.
 
