@@ -18,17 +18,17 @@ Command:
   -L/opt/microchip/xc16/v1.50/bin/bin/../../support/dsPIC33C/gld \
   -L/opt/microchip/xc16/v1.50/bin/bin/../../support/dsPIC33E/gld \
   -L/opt/microchip/xc16/v1.50/bin/bin/../../support/dsPIC33F/gld \
-  build/default/production/main_c.o \
-  build/default/production/e_sound.o \
-  build/default/production/e_init_codec_slave.o \
-  build/default/production/e_init_dci_master.o \
-  build/default/production/e_isr_dci.o \
-  build/default/production/e_sub_dci_kickoff.o \
-  build/default/production/e_led.o \
-  build/default/production/e_motors.o \
-  build/default/production/e_init_port.o \
-  build/default/production/e_music_comm.o \
-  build/default/production/e_const_sound.o \
+  build/default/production/_ext/1472/e_init_port.o \
+  build/default/production/_ext/1472/e_led.o \
+  build/default/production/_ext/1472/e_motors.o \
+  build/default/production/_ext/1472/e_music_comm.o \
+  build/default/production/_ext/1472/e_sound.o \
+  build/default/production/_ext/1472/main_c.o \
+  build/default/production/_ext/1472/e_const_sound.o \
+  build/default/production/_ext/1472/e_init_codec_slave.o \
+  build/default/production/_ext/1472/e_init_dci_master.o \
+  build/default/production/_ext/1472/e_isr_dci.o \
+  build/default/production/_ext/1472/e_sub_dci_kickoff.o \
   --defsym=__MPLAB_BUILD=1 \
   -Tp30F6014A.gld.00 \
   --stack=16 \
@@ -63,13 +63,13 @@ Archive member included because of file (symbol)
 /opt/microchip/xc16/v1.50/bin/bin/../../lib/liblega-pic30-elf.a(crt_start_mode_normal.Leo)
                               (__crt_start_mode_normal)
 /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(divsf3.eo)
-                              build/default/production/e_motors.o (___divsf3)
+                              build/default/production/_ext/1472/e_motors.o (___divsf3)
 /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(fixsfsi.eo)
-                              build/default/production/e_music_comm.o (_(float, int, long long, short, float, short, int))
+                              build/default/production/_ext/1472/e_music_comm.o (_(float, int, long long, short, float, short, int))
 /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(fixunssfsi.eo)
-                              build/default/production/e_motors.o (___fixunssfsi)
+                              build/default/production/_ext/1472/e_motors.o (___fixunssfsi)
 /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(floatsisf.eo)
-                              build/default/production/e_motors.o (___floatsisf)
+                              build/default/production/_ext/1472/e_motors.o (___floatsisf)
 /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(fpack.eo)
                               /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(divsf3.eo) (__fpack)
 /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(funpack.eo)
@@ -79,7 +79,7 @@ Archive member included because of file (symbol)
 /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(futil.eo)
                               /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(divsf3.eo) (__fPropagateNaN)
 /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(mulsf3.eo)
-                              build/default/production/e_music_comm.o (___mulsf3)
+                              build/default/production/_ext/1472/e_music_comm.o (___mulsf3)
 /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(floatdisf.eo)
                               /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(floatsisf.eo) (___floatdisf)
 /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(floatundisf.eo)
@@ -129,9 +129,8 @@ section                    address   length (PC units)   length (bytes) (dec)
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0             0xc  (12)
-.ndata                       0x80c                   0             0x8  (8)
-.nbss                        0x814                   0             0x2  (2)
-.ndata                       0x816                   0             0x2  (2)
+.ndata                       0x80c                   0             0xa  (10)
+.nbss                        0x816                   0             0x2  (2)
 
                  Total "data" memory used (bytes):           0x18  (24) <1%
 
@@ -154,17 +153,17 @@ External Symbols in Data Memory (by address):
                     0x080e                  _e_dci_unavailable
                     0x0810                  e_samples_count
                     0x0812                  e_actual_page
-                    0x0814                  e_tone_ptr
-                    0x0816                  _music_led
+                    0x0814                  _music_led
+                    0x0816                  e_tone_ptr
 
 External Symbols in Data Memory (by name):
 
                     0x080e                  _e_dci_unavailable
                     0x080c                  _e_stop_flag
-                    0x0816                  _music_led
+                    0x0814                  _music_led
                     0x0812                  e_actual_page
                     0x0810                  e_samples_count
-                    0x0814                  e_tone_ptr
+                    0x0816                  e_tone_ptr
 
 External Symbols in Program Memory (by address):
 
@@ -351,17 +350,17 @@ FICD             0xf8000c           0x000002
 
 Linker script and memory map
 
-LOAD build/default/production/main_c.o
-LOAD build/default/production/e_sound.o
-LOAD build/default/production/e_init_codec_slave.o
-LOAD build/default/production/e_init_dci_master.o
-LOAD build/default/production/e_isr_dci.o
-LOAD build/default/production/e_sub_dci_kickoff.o
-LOAD build/default/production/e_led.o
-LOAD build/default/production/e_motors.o
-LOAD build/default/production/e_init_port.o
-LOAD build/default/production/e_music_comm.o
-LOAD build/default/production/e_const_sound.o
+LOAD build/default/production/_ext/1472/e_init_port.o
+LOAD build/default/production/_ext/1472/e_led.o
+LOAD build/default/production/_ext/1472/e_motors.o
+LOAD build/default/production/_ext/1472/e_music_comm.o
+LOAD build/default/production/_ext/1472/e_sound.o
+LOAD build/default/production/_ext/1472/main_c.o
+LOAD build/default/production/_ext/1472/e_const_sound.o
+LOAD build/default/production/_ext/1472/e_init_codec_slave.o
+LOAD build/default/production/_ext/1472/e_init_dci_master.o
+LOAD build/default/production/_ext/1472/e_isr_dci.o
+LOAD build/default/production/_ext/1472/e_sub_dci_kickoff.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD p30F6014A
 LOAD /opt/microchip/xc16/v1.50/bin/bin/../../lib/libfx-elf.a
@@ -402,7 +401,7 @@ LOAD /opt/microchip/xc16/v1.50/bin/bin/../../lib/libfx-elf.a
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x0001c8        0x118 build/default/production/e_motors.o
+ .isr.text        0x0001c8        0x118 build/default/production/_ext/1472/e_motors.o
                   0x0001c8                  __T5Interrupt
                   0x000254                  __T4Interrupt
  .isr             0x0002e0          0x4 default_isr
@@ -467,15 +466,15 @@ __FUID3
 
 __FOSC            0xf80000          0x2
  *(__FOSC.sec*)
- __FOSC.sec       0xf80000          0x2 build/default/production/e_init_port.o
+ __FOSC.sec       0xf80000          0x2 build/default/production/_ext/1472/e_init_port.o
 
 __FWDT            0xf80002          0x2
  *(__FWDT.sec*)
- __FWDT.sec       0xf80002          0x2 build/default/production/e_init_port.o
+ __FWDT.sec       0xf80002          0x2 build/default/production/_ext/1472/e_init_port.o
 
 __FBORPOR         0xf80004          0x2
  *(__FBORPOR.sec*)
- __FBORPOR.sec    0xf80004          0x2 build/default/production/e_init_port.o
+ __FBORPOR.sec    0xf80004          0x2 build/default/production/_ext/1472/e_init_port.o
 
 __FBS
  *(__FBS.sec*)
@@ -485,7 +484,7 @@ __FSS
 
 __FGS             0xf8000a          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf8000a          0x2 /CW/_FGSXOÕ
+ __FGS.sec        0xf8000a          0x2 /CW/_FGSÈ½v
                   0xf8000a                  __FGS.sec
 
 __FICD
@@ -500,64 +499,64 @@ userdata
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x2b79
+.debug_info       0x000000       0x2b97
  *(.debug_info)
- .debug_info      0x000000        0x382 build/default/production/main_c.o
- .debug_info      0x000382        0x2dc build/default/production/e_sound.o
- .debug_info      0x00065e         0xb5 build/default/production/e_init_codec_slave.o
- .debug_info      0x000713         0xb4 build/default/production/e_init_dci_master.o
- .debug_info      0x0007c7         0xac build/default/production/e_isr_dci.o
- .debug_info      0x000873         0xb4 build/default/production/e_sub_dci_kickoff.o
- .debug_info      0x000927        0x3d1 build/default/production/e_led.o
- .debug_info      0x000cf8        0xada build/default/production/e_motors.o
- .debug_info      0x0017d2        0xd11 build/default/production/e_init_port.o
- .debug_info      0x0024e3        0x696 build/default/production/e_music_comm.o
+ .debug_info      0x000000        0xd14 build/default/production/_ext/1472/e_init_port.o
+ .debug_info      0x000d14        0x3d4 build/default/production/_ext/1472/e_led.o
+ .debug_info      0x0010e8        0xadd build/default/production/_ext/1472/e_motors.o
+ .debug_info      0x001bc5        0x699 build/default/production/_ext/1472/e_music_comm.o
+ .debug_info      0x00225e        0x2df build/default/production/_ext/1472/e_sound.o
+ .debug_info      0x00253d        0x385 build/default/production/_ext/1472/main_c.o
+ .debug_info      0x0028c2         0xb8 build/default/production/_ext/1472/e_init_codec_slave.o
+ .debug_info      0x00297a         0xb7 build/default/production/_ext/1472/e_init_dci_master.o
+ .debug_info      0x002a31         0xaf build/default/production/_ext/1472/e_isr_dci.o
+ .debug_info      0x002ae0         0xb7 build/default/production/_ext/1472/e_sub_dci_kickoff.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x54a
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0xff build/default/production/main_c.o
- .debug_abbrev    0x0000ff         0xbf build/default/production/e_sound.o
- .debug_abbrev    0x0001be         0x14 build/default/production/e_init_codec_slave.o
- .debug_abbrev    0x0001d2         0x14 build/default/production/e_init_dci_master.o
- .debug_abbrev    0x0001e6         0x14 build/default/production/e_isr_dci.o
- .debug_abbrev    0x0001fa         0x14 build/default/production/e_sub_dci_kickoff.o
- .debug_abbrev    0x00020e         0xb0 build/default/production/e_led.o
- .debug_abbrev    0x0002be        0x146 build/default/production/e_motors.o
- .debug_abbrev    0x000404         0x9b build/default/production/e_init_port.o
- .debug_abbrev    0x00049f         0xab build/default/production/e_music_comm.o
+ .debug_abbrev    0x000000         0x9b build/default/production/_ext/1472/e_init_port.o
+ .debug_abbrev    0x00009b         0xb0 build/default/production/_ext/1472/e_led.o
+ .debug_abbrev    0x00014b        0x146 build/default/production/_ext/1472/e_motors.o
+ .debug_abbrev    0x000291         0xab build/default/production/_ext/1472/e_music_comm.o
+ .debug_abbrev    0x00033c         0xbf build/default/production/_ext/1472/e_sound.o
+ .debug_abbrev    0x0003fb         0xff build/default/production/_ext/1472/main_c.o
+ .debug_abbrev    0x0004fa         0x14 build/default/production/_ext/1472/e_init_codec_slave.o
+ .debug_abbrev    0x00050e         0x14 build/default/production/_ext/1472/e_init_dci_master.o
+ .debug_abbrev    0x000522         0x14 build/default/production/_ext/1472/e_isr_dci.o
+ .debug_abbrev    0x000536         0x14 build/default/production/_ext/1472/e_sub_dci_kickoff.o
 
-.debug_line       0x000000        0x99f
+.debug_line       0x000000        0x9bd
  *(.debug_line)
- .debug_line      0x000000        0x19f build/default/production/main_c.o
- .debug_line      0x00019f         0xee build/default/production/e_sound.o
- .debug_line      0x00028d         0x9a build/default/production/e_init_codec_slave.o
- .debug_line      0x000327         0x5e build/default/production/e_init_dci_master.o
- .debug_line      0x000385         0x6e build/default/production/e_isr_dci.o
- .debug_line      0x0003f3         0x76 build/default/production/e_sub_dci_kickoff.o
- .debug_line      0x000469        0x142 build/default/production/e_led.o
- .debug_line      0x0005ab        0x16c build/default/production/e_motors.o
- .debug_line      0x000717        0x128 build/default/production/e_init_port.o
- .debug_line      0x00083f        0x146 build/default/production/e_music_comm.o
- .debug_line      0x000985         0x1a build/default/production/e_const_sound.o
+ .debug_line      0x000000        0x12b build/default/production/_ext/1472/e_init_port.o
+ .debug_line      0x00012b        0x145 build/default/production/_ext/1472/e_led.o
+ .debug_line      0x000270        0x16f build/default/production/_ext/1472/e_motors.o
+ .debug_line      0x0003df        0x149 build/default/production/_ext/1472/e_music_comm.o
+ .debug_line      0x000528         0xf1 build/default/production/_ext/1472/e_sound.o
+ .debug_line      0x000619        0x1a2 build/default/production/_ext/1472/main_c.o
+ .debug_line      0x0007bb         0x1a build/default/production/_ext/1472/e_const_sound.o
+ .debug_line      0x0007d5         0x9d build/default/production/_ext/1472/e_init_codec_slave.o
+ .debug_line      0x000872         0x61 build/default/production/_ext/1472/e_init_dci_master.o
+ .debug_line      0x0008d3         0x71 build/default/production/_ext/1472/e_isr_dci.o
+ .debug_line      0x000944         0x79 build/default/production/_ext/1472/e_sub_dci_kickoff.o
 
 .debug_frame      0x000000        0x5de
  *(.debug_frame)
- .debug_frame     0x000000         0x96 build/default/production/main_c.o
- .debug_frame     0x000096         0x62 build/default/production/e_sound.o
- .debug_frame     0x0000f8         0x7c build/default/production/e_led.o
- .debug_frame     0x000174        0x102 build/default/production/e_motors.o
- .debug_frame     0x000276         0x2e build/default/production/e_init_port.o
- .debug_frame     0x0002a4        0x33a build/default/production/e_music_comm.o
+ .debug_frame     0x000000         0x2e build/default/production/_ext/1472/e_init_port.o
+ .debug_frame     0x00002e         0x7c build/default/production/_ext/1472/e_led.o
+ .debug_frame     0x0000aa        0x102 build/default/production/_ext/1472/e_motors.o
+ .debug_frame     0x0001ac        0x33a build/default/production/_ext/1472/e_music_comm.o
+ .debug_frame     0x0004e6         0x62 build/default/production/_ext/1472/e_sound.o
+ .debug_frame     0x000548         0x96 build/default/production/_ext/1472/main_c.o
 
 .debug_str        0x000000         0xfb
  *(.debug_str)
- .debug_str       0x000000         0x26 build/default/production/main_c.o
- .debug_str       0x000026          0x9 build/default/production/e_sound.o
- .debug_str       0x00002f         0x12 build/default/production/e_led.o
- .debug_str       0x000041         0x51 build/default/production/e_motors.o
- .debug_str       0x000092         0x5f build/default/production/e_init_port.o
- .debug_str       0x0000f1          0xa build/default/production/e_music_comm.o
+ .debug_str       0x000000         0x5f build/default/production/_ext/1472/e_init_port.o
+ .debug_str       0x00005f         0x12 build/default/production/_ext/1472/e_led.o
+ .debug_str       0x000071         0x51 build/default/production/_ext/1472/e_motors.o
+ .debug_str       0x0000c2          0xa build/default/production/_ext/1472/e_music_comm.o
+ .debug_str       0x0000cc          0x9 build/default/production/_ext/1472/e_sound.o
+ .debug_str       0x0000d5         0x26 build/default/production/_ext/1472/main_c.o
 
 .debug_loc
  *(.debug_loc)
@@ -569,17 +568,17 @@ userdata
                   0x000000        0x318
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x5a build/default/production/main_c.o
+                  0x000000         0x4c build/default/production/_ext/1472/e_init_port.o
  .debug_pubnames
-                  0x00005a         0x46 build/default/production/e_sound.o
+                  0x00004c         0x57 build/default/production/_ext/1472/e_led.o
  .debug_pubnames
-                  0x0000a0         0x57 build/default/production/e_led.o
+                  0x0000a3         0xc7 build/default/production/_ext/1472/e_motors.o
  .debug_pubnames
-                  0x0000f7         0xc7 build/default/production/e_motors.o
+                  0x00016a        0x10e build/default/production/_ext/1472/e_music_comm.o
  .debug_pubnames
-                  0x0001be         0x4c build/default/production/e_init_port.o
+                  0x000278         0x46 build/default/production/_ext/1472/e_sound.o
  .debug_pubnames
-                  0x00020a        0x10e build/default/production/e_music_comm.o
+                  0x0002be         0x5a build/default/production/_ext/1472/main_c.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -587,25 +586,25 @@ userdata
 .debug_aranges    0x000000         0xf0
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/production/main_c.o
+                  0x000000         0x18 build/default/production/_ext/1472/e_init_port.o
  .debug_aranges
-                  0x000018         0x18 build/default/production/e_sound.o
+                  0x000018         0x18 build/default/production/_ext/1472/e_led.o
  .debug_aranges
-                  0x000030         0x18 build/default/production/e_init_codec_slave.o
+                  0x000030         0x18 build/default/production/_ext/1472/e_motors.o
  .debug_aranges
-                  0x000048         0x18 build/default/production/e_init_dci_master.o
+                  0x000048         0x18 build/default/production/_ext/1472/e_music_comm.o
  .debug_aranges
-                  0x000060         0x18 build/default/production/e_isr_dci.o
+                  0x000060         0x18 build/default/production/_ext/1472/e_sound.o
  .debug_aranges
-                  0x000078         0x18 build/default/production/e_sub_dci_kickoff.o
+                  0x000078         0x18 build/default/production/_ext/1472/main_c.o
  .debug_aranges
-                  0x000090         0x18 build/default/production/e_led.o
+                  0x000090         0x18 build/default/production/_ext/1472/e_init_codec_slave.o
  .debug_aranges
-                  0x0000a8         0x18 build/default/production/e_motors.o
+                  0x0000a8         0x18 build/default/production/_ext/1472/e_init_dci_master.o
  .debug_aranges
-                  0x0000c0         0x18 build/default/production/e_init_port.o
+                  0x0000c0         0x18 build/default/production/_ext/1472/e_isr_dci.o
  .debug_aranges
-                  0x0000d8         0x18 build/default/production/e_music_comm.o
+                  0x0000d8         0x18 build/default/production/_ext/1472/e_sub_dci_kickoff.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -1619,39 +1618,39 @@ LOAD /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a
 LOAD /opt/microchip/xc16/v1.50/bin/bin/../../lib/liblega-c-elf.a
 END GROUP
 OUTPUT(dist/default/production/jr_music_comm.X.production.elf elf32-pic30)
-LOAD /CW/_FGSXOÕ
+LOAD /CW/_FGSÈ½v
 LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
                   0x0000f0        0x2e4
  .debug_pubtypes
-                  0x0000f0         0x3e build/default/production/main_c.o
+                  0x0000f0        0x14b build/default/production/_ext/1472/e_init_port.o
  .debug_pubtypes
-                  0x00012e         0x3c build/default/production/e_sound.o
+                  0x00023b         0x59 build/default/production/_ext/1472/e_led.o
  .debug_pubtypes
-                  0x00016a         0x59 build/default/production/e_led.o
+                  0x000294         0xb4 build/default/production/_ext/1472/e_motors.o
  .debug_pubtypes
-                  0x0001c3         0xb4 build/default/production/e_motors.o
+                  0x000348         0x12 build/default/production/_ext/1472/e_music_comm.o
  .debug_pubtypes
-                  0x000277        0x14b build/default/production/e_init_port.o
+                  0x00035a         0x3c build/default/production/_ext/1472/e_sound.o
  .debug_pubtypes
-                  0x0003c2         0x12 build/default/production/e_music_comm.o
+                  0x000396         0x3e build/default/production/_ext/1472/main_c.o
 
 __c30_signature
                   0x0003d4         0x72
  __c30_signature
-                  0x0003d4          0x6 build/default/production/main_c.o
+                  0x0003d4          0x6 build/default/production/_ext/1472/e_init_port.o
  __c30_signature
-                  0x0003da          0x6 build/default/production/e_sound.o
+                  0x0003da          0x6 build/default/production/_ext/1472/e_led.o
  __c30_signature
-                  0x0003e0          0x6 build/default/production/e_led.o
+                  0x0003e0          0x6 build/default/production/_ext/1472/e_motors.o
  __c30_signature
-                  0x0003e6          0x6 build/default/production/e_motors.o
+                  0x0003e6          0x6 build/default/production/_ext/1472/e_music_comm.o
  __c30_signature
-                  0x0003ec          0x6 build/default/production/e_init_port.o
+                  0x0003ec          0x6 build/default/production/_ext/1472/e_sound.o
  __c30_signature
-                  0x0003f2          0x6 build/default/production/e_music_comm.o
+                  0x0003f2          0x6 build/default/production/_ext/1472/main_c.o
  __c30_signature
                   0x0003f8          0x6 /opt/microchip/xc16/v1.50/bin/bin/../../lib/liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
@@ -1680,45 +1679,43 @@ __c30_signature
                   0x000440          0x6 /opt/microchip/xc16/v1.50/bin/bin/../../lib/libm-elf.a(floatundisf.eo)
 
 .nbss               0x0800          0xc
- .nbss              0x0800          0xc build/default/production/e_motors.o
+ .nbss              0x0800          0xc build/default/production/_ext/1472/e_motors.o
 
-.ndata              0x080c          0x8
- .ndata             0x080c          0x8 build/default/production/e_sub_dci_kickoff.o
+.ndata              0x080c          0xa
+ .ndata             0x080c          0x8 build/default/production/_ext/1472/e_sub_dci_kickoff.o
                     0x080c                  _e_stop_flag
                     0x080e                  _e_dci_unavailable
                     0x0810                  e_samples_count
                     0x0812                  e_actual_page
+ .ndata             0x0814          0x2 build/default/production/_ext/1472/e_music_comm.o
+                    0x0814                  _music_led
 
-.nbss               0x0814          0x2
- .nbss              0x0814          0x2 build/default/production/e_sub_dci_kickoff.o
-                    0x0814                  e_tone_ptr
-
-.ndata              0x0816          0x2
- .ndata             0x0816          0x2 build/default/production/e_music_comm.o
-                    0x0816                  _music_led
-
-.ivt._DCIInterrupt
-                  0x000066          0x2
- .ivt._DCIInterrupt
-                  0x000066          0x2 build/default/production/e_isr_dci.o
+.nbss               0x0816          0x2
+ .nbss              0x0816          0x2 build/default/production/_ext/1472/e_sub_dci_kickoff.o
+                    0x0816                  e_tone_ptr
 
 .ivt._T5Interrupt
                   0x000040          0x2
  .ivt._T5Interrupt
-                  0x000040          0x2 build/default/production/e_motors.o
+                  0x000040          0x2 build/default/production/_ext/1472/e_motors.o
 
 .ivt._T4Interrupt
                   0x00003e          0x2
  .ivt._T4Interrupt
-                  0x00003e          0x2 build/default/production/e_motors.o
+                  0x00003e          0x2 build/default/production/_ext/1472/e_motors.o
+
+.ivt._DCIInterrupt
+                  0x000066          0x2
+ .ivt._DCIInterrupt
+                  0x000066          0x2 build/default/production/_ext/1472/e_isr_dci.o
 
 .sound_samples    0x000574       0x9d80
  .sound_samples
-                  0x000574       0x9d80 build/default/production/e_const_sound.o
+                  0x000574       0x9d80 build/default/production/_ext/1472/e_const_sound.o
                   0x000574                  e_sound_sample
 
 .text             0x00a2f4        0xdea
- .text            0x00a2f4        0x46c build/default/production/e_music_comm.o
+ .text            0x00a2f4        0x46c build/default/production/_ext/1472/e_music_comm.o
                   0x00a2f4                  _wait_jr
                   0x00a332                  _set_music_led
                   0x00a33e                  _rest
@@ -1750,18 +1747,18 @@ __c30_signature
                   0x00a706                  _re1
                   0x00a712                  _e1
                   0x00a754                  _mi1
- .text            0x00a760        0x3ce build/default/production/e_led.o
+ .text            0x00a760        0x3ce build/default/production/_ext/1472/e_led.o
                   0x00a760                  _e_set_led
                   0x00aaa0                  _e_set_body_led
                   0x00aadc                  _e_set_front_led
                   0x00ab18                  _e_led_clear
- .text            0x00ab2e        0x24c build/default/production/main_c.o
+ .text            0x00ab2e        0x24c build/default/production/_ext/1472/main_c.o
                   0x00ab2e                  _do_nothing
                   0x00ab34                  _getselector
                   0x00ab68                  _all_tones
                   0x00ac00                  _all_tones_com
                   0x00ac84                  _main
- .text            0x00ad7a         0xcc build/default/production/e_motors.o
+ .text            0x00ad7a         0xcc build/default/production/_ext/1472/e_motors.o
                   0x00ad7a                  _e_init_motors
                   0x00ad82                  _e_set_speed_left
                   0x00adcc                  _e_set_speed_right
@@ -1769,17 +1766,17 @@ __c30_signature
                   0x00ae1e                  _e_set_steps_left
                   0x00ae2e                  _e_get_steps_right
                   0x00ae36                  _e_set_steps_right
- .text            0x00ae46         0xac build/default/production/e_init_codec_slave.o
+ .text            0x00ae46         0xac build/default/production/_ext/1472/e_init_codec_slave.o
                   0x00ae46                  _e_init_codec_slave
- .text            0x00aef2         0x8a build/default/production/e_init_port.o
+ .text            0x00aef2         0x8a build/default/production/_ext/1472/e_init_port.o
                   0x00aef2                  _e_init_port
- .text            0x00af7c         0x76 build/default/production/e_isr_dci.o
+ .text            0x00af7c         0x76 build/default/production/_ext/1472/e_isr_dci.o
                   0x00af7c                  __DCIInterrupt
- .text            0x00aff2         0x76 build/default/production/e_sub_dci_kickoff.o
+ .text            0x00aff2         0x76 build/default/production/_ext/1472/e_sub_dci_kickoff.o
                   0x00aff2                  _e_sub_dci_kickoff
- .text            0x00b068         0x3e build/default/production/e_init_dci_master.o
+ .text            0x00b068         0x3e build/default/production/_ext/1472/e_init_dci_master.o
                   0x00b068                  _e_init_dci_master
- .text            0x00b0a6         0x38 build/default/production/e_sound.o
+ .text            0x00b0a6         0x38 build/default/production/_ext/1472/e_sound.o
                   0x00b0a6                  _e_init_sound
                   0x00b0c2                  _e_play_sound
                   0x00b0d6                  _e_close_sound

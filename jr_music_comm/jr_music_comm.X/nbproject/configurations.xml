@@ -4,14 +4,14 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>e_epuck_ports.h</itemPath>
-      <itemPath>e_init_port.h</itemPath>
-      <itemPath>e_sound.h</itemPath>
-      <itemPath>e_common.inc</itemPath>
-      <itemPath>e_epuck_ports.inc</itemPath>
-      <itemPath>e_led.h</itemPath>
-      <itemPath>e_motors.h</itemPath>
-      <itemPath>e_music_comm.h</itemPath>
+      <itemPath>../e_common.inc</itemPath>
+      <itemPath>../e_epuck_ports.h</itemPath>
+      <itemPath>../e_epuck_ports.inc</itemPath>
+      <itemPath>../e_init_port.h</itemPath>
+      <itemPath>../e_led.h</itemPath>
+      <itemPath>../e_motors.h</itemPath>
+      <itemPath>../e_music_comm.h</itemPath>
+      <itemPath>../e_sound.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,17 +20,17 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main_c.c</itemPath>
-      <itemPath>e_sound.c</itemPath>
-      <itemPath>e_init_codec_slave.s</itemPath>
-      <itemPath>e_init_dci_master.s</itemPath>
-      <itemPath>e_isr_dci.s</itemPath>
-      <itemPath>e_sub_dci_kickoff.s</itemPath>
-      <itemPath>e_led.c</itemPath>
-      <itemPath>e_motors.c</itemPath>
-      <itemPath>e_init_port.c</itemPath>
-      <itemPath>e_music_comm.c</itemPath>
-      <itemPath>e_const_sound.s</itemPath>
+      <itemPath>../e_init_port.c</itemPath>
+      <itemPath>../e_led.c</itemPath>
+      <itemPath>../e_motors.c</itemPath>
+      <itemPath>../e_music_comm.c</itemPath>
+      <itemPath>../e_sound.c</itemPath>
+      <itemPath>../main_c.c</itemPath>
+      <itemPath>../e_const_sound.s</itemPath>
+      <itemPath>../e_init_codec_slave.s</itemPath>
+      <itemPath>../e_init_dci_master.s</itemPath>
+      <itemPath>../e_isr_dci.s</itemPath>
+      <itemPath>../e_sub_dci_kickoff.s</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -38,6 +38,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>..</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -46,7 +49,7 @@
         <targetDevice>dsPIC30F6014A</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pk4hybrid</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>1.50</languageToolchainVersion>
         <platform>2</platform>
@@ -95,7 +98,7 @@
         <property key="enable-short-double" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
-        <property key="extra-include-directories" value="."/>
+        <property key="extra-include-directories" value=".;../"/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>
@@ -126,7 +129,7 @@
       <C30-AS>
         <property key="assembler-symbols" value=""/>
         <property key="expand-macros" value="false"/>
-        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-assembler" value="../"/>
         <property key="extra-include-directories-for-preprocessor" value=""/>
         <property key="false-conditionals" value="false"/>
         <property key="keep-locals" value="false"/>
@@ -192,13 +195,14 @@
         <property key="warn-section-align" value="false"/>
       </C30-LD>
       <C30Global>
-        <property key="common-include-directories" value="."/>
+        <property key="common-include-directories" value=".;../"/>
         <property key="dual-boot-partition" value="0"/>
         <property key="fast-math" value="false"/>
         <property key="generic-16-bit" value="false"/>
         <property key="legacy-libc" value="true"/>
         <property key="mpreserve-all" value="false"/>
         <property key="oXC16glb-macros" value=""/>
+        <property key="omit-pack-options" value="1"/>
         <property key="output-file-format" value="elf"/>
         <property key="preserve-all" value="false"/>
         <property key="preserve-file" value=""/>
@@ -238,6 +242,8 @@
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UpdateOptions"
                   value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack"
+                  value="Press to select which tool pack to use"/>
         <property key="UART 1" value="true"/>
         <property key="UART 2" value="true"/>
         <property key="communication.activationmode" value="nohv"/>
@@ -281,8 +287,13 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="programoptionsedbg.eraseb4program" value="true"/>
         <property key="ptgProgramImage" value="true"/>
         <property key="ptgSendImage" value="true"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value="5.0"/>
       </pk4hybrid>
     </conf>
