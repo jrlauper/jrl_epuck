@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/default/production/jr_music_comm.X.production.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>8192</length>
+      <used>24</used>
+      <free>8168</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>147072</length>
+      <used>67599</used>
+      <free>79473</free>
+    </memory>
+  </executable>
+</project>
