@@ -4,8 +4,7 @@ build/default/production/_ext/1472/utility_mod3.o:  \
 ../e_epuck_ports.h  \
 ../e_init_port.h  \
 ../e_ad_conv.h  \
- ../e_agenda.h  \
-../btcom.h  \
+ ../btcom.h  \
 ../e_led.h  \
 ../e_prox.h  \
 ../e_micro.h 

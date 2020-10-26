@@ -16,7 +16,6 @@
 #include "e_init_port.h"
 
 #include "e_ad_conv.h"
-//#include "e_agenda.h"
 #include "btcom.h"
 
 #include "e_micro.h"
@@ -168,7 +167,6 @@ void fft_set_mode(int fft_mode_var){
 
 void fft_init(void) { 
  	e_init_port();
-//	e_start_agendas_processing();        
 	e_init_ad_scan(fft_mode);   
     if(VERBOSE) btcomSendString(CYN "Micros Volume Calibration start...\r\n" COL_RESET);           
     volume_calibration(); // includes body_led on/off    

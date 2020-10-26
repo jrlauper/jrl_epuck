@@ -1,48 +1,47 @@
-/* *************** FFT Sound Detection Test ***************
+/* *************** FFT MULTIPLE Tones/Freq recognition attempts **************
+ * Summer 2020, unifr.ch, Jean-Roch LAUPER
  * 
- * Spring 2019 - JR Lauper - FFT Sound detections Tests 
- * based on the code mentioned just below
+ * Preliminary note: 
+ *      Although the code has been cleaned up, it is still a bit drafty. 
+ *      This reflects its "attempts" and "tests" aspect. 
+ *      However it should be clear enough to allow others to continue work in the same direction.
  * 
- * Please, see runfflistener_mod.c header for more details
- **************************************************************************/
-
-
-/**************************************************************************
-* 			Programm to demonstrate how FFT works				          *
-*			Version 2.0 août 2007				                          *
-*			Michael Bonani, Jonathan Besuchet				              *
-*									                                      *
-**************************************************************************/
-
-/*! \file
- * \brief The frequency recognizer using FFT
- * \section sect1 Introduction
- * The runfftlistener programm is made to illustrate how you can use the
- * FFT package of the library. The goal is to determine the frequency of
- * the sound comming from the microphone number 0. If the frequency is 
- * under 900Hz the e-puck will turn left. If the frequency is between
- * 900Hz and 1800Hz the e-puck will go forward. If the frequency is over
- * 1800Hz the e-puck will turn right.
+ * The basic idea behind this file/project
+ *      "Now that I'm able to make Robots emits tones
+ *      My goal : see how the others robots can recognize them"
  * 
- * \section sect2 Playing the demo
- * First of all, move the selector to the position 9 to 15 and reset the e-puck.
- * To play the demo, you have two allternatives:
- * - You are a good whistler. In this case you can drive the e-puck with
- * your mouse by whistling in the good frequency.
- * - You do not know whistlering. In this case you can play the "sound1.mp3"
- * or "sound2.mp3" which are in the folder "demo" to drive the e-puck.
- *
- * \section sect3 Video of the demo
- * - Driving the e-puck by whistlering and playing sound on PC: http://www.youtube.com/watch?v=bfHFo79uZGY
- *
- * \author Jonathan Besuchet
- */
+ * For the correspondence tones recognized/leds : 
+ * see in this folder the picture: 
+ *      Sensors and Leds - faded - with tones (JR).png
+ * 
+ * 
+ *  
+ * Videos:  
+ * (1) E-Puck1 - Tones Recognition (FFT) - piano and whistling
+ *      https://youtu.be/516BiB3IN2Q
+ * 
+ * (2) E-Puck1 - Robots "Communication" through sounds - Unsuccessful Attemps with A880
+ *      https://youtu.be/bFydJq7alVA
+ *       0:03 run_fft_listener() - only the very frequency meant to be recognized
+ *       1:40 run_fft_listener_COMM() with init_COMM_freq_A880() 
+ *             group of possible frequencies for each tone (instead of a unique frequency)
+ *       3:10 run_fft_listener_comm_STAT() with init_comm_freq_A880_STAT()
+ *              group of possible frequencies 
+ *              with occurrence assessment to find the right tone (20 samples used in the video)
+ * 
+ * (3) E-Puck1 - Robots "Communication" through sounds - Successful with HF7
+ *      https://youtu.be/w7GG8Ibt3go
+ *      run_fft_listener_comm_stat()
+ *      with init_comm_freq_HF7_stat()
+ * 
+***************************************************************************** */
 
 #ifndef _LISTENER
 #define _LISTENER
 
-void run_fft_listener(); // corresponding tone
-void run_fft_listener_comm(); // corresponding group of tone
-void run_fft_listener_comm_stat(); // more close tone
+// Tone identification
+void run_fft_listener(); // comparison to ONE frequency
+void run_fft_listener_comm(); // comparison to a GROUP of frequencies
+void run_fft_listener_comm_stat(); // multiple SAMPLES comparison to groups
 
 #endif
