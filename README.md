@@ -15,7 +15,7 @@ The demos emphasize *collective* behavior and make extensive use of e-puck *soun
 - Simple **sound library** enabling to easily produce tones from **pre-recorded** sounds: [jr_wav_music2](https://github.com/jrlauper/jrl_epuck/tree/master/jr_wav_music2)
 - A more **advanced** **sound library** enabling to generate any sound **"on the fly"** with more advanced features (sound wave shape, volume control, ...) : [jr_freq_sound](https://github.com/jrlauper/jrl_epuck/tree/master/jr_freq_sound)
 
-The other folders are connected to material described in the report. <br/>
+The other folders are connected to material described in the report: [link](https://github.com/jrlauper/jrl_epuck/blob/master/Lauper%20(2020).%20E-pucks.%20Report.pdf). <br/>
 Here is the *playlist* of all other demos related to the report and made for documentation purposes: [link](https://www.youtube.com/playlist?list=PLrscHgSUZPdrjsOhXDUBphgNyq3NGuZ5R)
 
 ![e-puck](image.jpg)
