@@ -14,12 +14,12 @@ The demos emphasize *collective* behavior and make extensive use of e-puck *soun
     - youtube *playlist* of demo videos for all the demos set: [link](https://www.youtube.com/playlist?list=PLrscHgSUZPdr38tirAsB4_4Q93khKP9Rv)
 
 - Simple **sound library** enabling to easily produce tones from **pre-recorded** sounds: [jr_wav_music2](https://github.com/jrlauper/jrl_epuck/tree/master/jr_wav_music2)
-- More **advanced** **sound library** enabling to generate any sound **"on the fly"** with more advanced features (wave shape, volume control, ...) : [jr_freq_sound](https://github.com/jrlauper/jrl_epuck/tree/master/jr_freq_sound)
+- More **advanced** **sound library** enabling to generate any sound **"on the fly"** with more advanced features (wave shape, volume control, ...): [jr_freq_sound](https://github.com/jrlauper/jrl_epuck/tree/master/jr_freq_sound)
 
 The other folders are connected to material described in the [report](https://github.com/jrlauper/jrl_epuck/blob/master/Lauper%20(2020).%20E-pucks.%20Report.pdf). <br/>
 Here is the *playlist* of all other demos related to the report and made for documentation purposes: [link](https://www.youtube.com/playlist?list=PLrscHgSUZPdrjsOhXDUBphgNyq3NGuZ5R)
 
-###Code reuse and citation
+### Code reuse and citation
 
 If some original part of this work (part of the code, report, figures, ...) is used or mentioned, its reference should mention the author as well as its github location. A possible way to do it would be, for instance: 
 
