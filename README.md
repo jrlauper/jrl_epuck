@@ -26,6 +26,7 @@ If some original part of this work (part of the code, report, figures, ...) is u
 > LAUPER, Jean-Roch (2020). "Robots Collective Behavior Demos. Using Embedded Programming with E-Pucks vers.1 (dsPIC) and Sound". <https://github.com/jrlauper/jrl_epuck/tree/master/jr_demo>.
 
 <br/>
+
 ![e-puck](image.jpg)
 
 
