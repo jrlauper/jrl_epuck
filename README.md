@@ -23,7 +23,7 @@ Here is the *playlist* of all other demos related to the report and made for doc
 
 If some original part of this work (part of the code, report, figures, ...) is used or mentioned, its reference should mention the author as well as its github location. A possible way to do it would be, for instance: 
 
-> LAUPER, Jean-Roch (2020). "Robots Collective Behavior Demos. Using Embedded Programming with E-Pucks vers.1 (dsPIC) and Sound". <https://github.com/jrlauper/jrl_epuck/tree/master/jr_demo>.
+> LAUPER, Jean-Roch (2020). "Robots Collective Behavior Demos. Using Embedded Programming with E-Pucks vers.1 (dsPIC) and Sound". <https://github.com/jrlauper/jrl_epuck>.
 
 <br/>
 
